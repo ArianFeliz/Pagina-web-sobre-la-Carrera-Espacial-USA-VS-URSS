@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Prueba de Integración - Club Social Aurora</title>
+    <style>
+        body {
+            font-family: "Segoe UI", Arial;
+            background: #e6edf7;
+            padding: 40px;
+        }
+        .contenedor {
+            width: 450px;
+            background: #fff;
+            margin: auto;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 0 15px #a2a2a2;
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+        select, button {
+            width: 100%;
+            padding: 12px;
+            margin-top: 12px;
+            border-radius: 8px;
+            border: 1px solid #888;
+        }
+        button {
+            cursor: pointer;
+            background: #4a6cf7;
+            color: white;
+            border: none;
+            transition: .2s;
+        }
+        button:hover {
+            background: #394ed4;
+        }
+        .caja-resultado {
+            margin-top: 20px;
+            background: #f4f7ff;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 5px solid #4a6cf7;
+        }
+    </style>
+</head>
+<body>
+
+<div class="contenedor">
+    <h2>Club Social Aurora</h2>
+    <p>Seleccione una persona para probar la integración del sistema.</p>
+
+    <select id="personaId">
+        <option value="101">101 - Daniela Martínez</option>
+        <option value="102">102 - Carlos Hernández</option>
+        <option value="103">103 - Sofía Rodríguez</option>
+        <option value="104">104 - Joaquín Rivera</option>
+    </select>
+
+    <button onclick="probarIntegracion()">Ejecutar prueba</button>
+
+    <div class="caja-resultado" id="resultado"></div>
+</div>
+
+
+<script>
+    // -------------------------------------------------------------------------
+    // MÓDULO 1: OBTENER PERSONA (simulación de base de datos interna)
+    // -------------------------------------------------------------------------
+    function obtenerPersona(id) {
+        const personas = {
+            101: { nombre: "Daniela Martínez", edad: 29, miembro: true },
+            102: { nombre: "Carlos Hernández", edad: 35, miembro: false },
+            103: { nombre: "Sofía Rodríguez", edad: 22, miembro: true },
+            104: { nombre: "Joaquín Rivera", edad: 41, miembro: false }
+        };
+
+        return personas[id];
+    }
+
+    // -------------------------------------------------------------------------
+    // MÓDULO 2: VERIFICAR MEMBRESÍA
+    // -------------------------------------------------------------------------
+    function verificarMembresia(persona) {
+        return persona.miembro === true;
+    }
+
+    // -------------------------------------------------------------------------
+    // MÓDULO 3: GENERAR SALUDO PERSONALIZADO
+    // -------------------------------------------------------------------------
+    function generarSaludo(persona, esMiembro) {
+        if (esMiembro) {
+            return `¡Hola ${persona.nombre}! Gracias por seguir siendo parte del Club Aurora. Tenemos nuevos beneficios para personas como tú, que llevan tiempo con nosotros.`;
+        } else {
+            return `Hola ${persona.nombre}. Notamos que aún no eres miembro del Club Aurora. ¡Te invitamos a unirte y disfrutar de todos nuestros eventos y actividades exclusivas!`;
+        }
+    }
+
+    // -------------------------------------------------------------------------
+    // PRUEBA DE INTEGRACIÓN VISUAL
+    // -------------------------------------------------------------------------
+    function probarIntegracion() {
+        const id = document.getElementById("personaId").value;
+
+        const persona = obtenerPersona(id);          // Módulo 1
+        const esMiembro = verificarMembresia(persona); // Módulo 2
+        const mensajeFinal = generarSaludo(persona, esMiembro); // Módulo 3
+
+        document.getElementById("resultado").innerText = mensajeFinal;
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal Carrera Espacial</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            overflow: hidden;
+            background-image: url(1920x1080-OIP.jpg);
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            position: relative;
+        }
+
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(13, 27, 42, 0.85), rgba(15, 23, 39, 0.75));
+            z-index: 1;
+        }
+
+        /* Estrellas animadas */
+        .stars {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 2;
+        }
+
+        .star {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background: #FFD700;
+            border-radius: 50%;
+            animation: twinkle 3s infinite;
+        }
+
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.3; transform: scale(1); }
+            50% { opacity: 1; transform: scale(1.5); }
+        }
+
+        /* Contenedor principal */
+        .container {
+            position: relative;
+            z-index: 3;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start; /* Cambiado a flex-start */
+            padding: 20px;
+            padding-left: 80px; /* Añadido padding izquierdo */
+        }
+
+        /* Pantallas */
+        .screen {
+            display: none;
+            width: 100%;
+            max-width: 1200px;
+        }
+
+        .screen.active {
+            display: block;
+            animation: screenSlide 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        }
+
+        @keyframes screenSlide {
+            from {
+                opacity: 0;
+                transform: translateX(-100px) rotateY(-20deg); /* Invertido */
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0) rotateY(0);
+            }
+        }
+
+        /* Card futurista - Orden invertido */
+        .card-container {
+            display: grid;
+            grid-template-columns: 2fr 2fr;
+            gap: 40px;
+            align-items: center;
+            perspective: 1000px;
+        }
+
+        /* Contenido primero */
+        .content-section {
+            order: 1; /* Contenido a la izquierda */
+            padding: 40px;
+            background: linear-gradient(135deg, rgba(13, 27, 42, 0.95), rgba(26, 74, 162, 0.85));
+            border-radius: 30px;
+            border: 2px solid rgba(255, 215, 0, 0.3);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            box-shadow: 
+                0 20px 60px rgba(0, 0, 0, 0.8),
+                inset 0 0 40px rgba(230, 57, 70, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Visual después */
+        .visual-section {
+            order: 2; /* Visual a la derecha */
+            position: relative;
+            height: 1800px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Hologram effect */
+        .hologram {
+            width: 400px;
+            height: 400px;
+            position: relative;
+            animation: float 4s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+
+        .hologram-ring {
+            position: absolute;
+            border: 2px solid;
+            border-radius: 50%;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        .ring-1 {
+            width: 100%;
+            height: 100%;
+            border-color: rgba(255, 174, 0, 0.929);
+            animation-delay: 0s;
+        }
+
+        .ring-2 {
+            width: 80%;
+            height: 80%;
+            top: 10%;
+            left: 10%;
+            border-color: rgba(255, 77, 0, 0.6);
+            animation-delay: 0.3s;
+        }
+
+        .ring-3 {
+            width: 60%;
+            height: 60%;
+            top: 20%;
+            left: 20%;
+            border-color: rgba(21, 0, 255, 0.6);
+            animation-delay: 0.6s;
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+            50% {
+                transform: scale(1.1);
+                opacity: 0.5;
+            }
+        }
+
+        .hologram-icon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 120px;
+            filter: drop-shadow(0 0 20px rgba(255, 215, 0, 0.6));
+            animation: rotate3d 10s linear infinite;
+        }
+
+        @keyframes rotate3d {
+            from {
+                transform: translate(-50%, -50%) rotateY(0deg);
+            }
+            to {
+                transform: translate(-50%, -50%) rotateY(360deg);
+            }
+        }
+
+        .content-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(
+                45deg,
+                transparent,
+                rgba(255, 215, 0, 0.05),
+                transparent
+            );
+            animation: scan 4s linear infinite;
+        }
+
+        @keyframes scan {
+            from {
+                transform: translateX(-100%) translateY(-100%);
+            }
+            to {
+                transform: translateX(100%) translateY(100%);
+            }
+        }
+
+        .content-section > * {
+            position: relative;
+            z-index: 1;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 8px 20px;
+            background: linear-gradient(135deg, #E63946, #FF6B6B);
+            color: #fff;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            border-radius: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 0 20px rgba(230, 57, 70, 0.5);
+            animation: slideDown 0.6s ease 0.2s both;
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h1 {
+            font-size: 45px;
+            font-weight: 800;
+            background: linear-gradient(135deg, #FFD700, #FFA500, #E63946);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 30px;
+            line-height: 1.1;
+            animation: slideDown 0.6s ease 0.3s both;
+            text-shadow: 0 0 30px rgba(255, 215, 0, 0.3);
+            padding-bottom: 15px;
+        }
+
+        p {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 18px;
+            line-height: 1.8;
+            margin-bottom: 35px;
+            animation: slideDown 0.6s ease 0.4s both;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Botones futuristas */
+        .action-buttons {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 30px;
+            animation: slideDown 0.6s ease 0.5s both;
+        }
+
+        .btn {
+            padding: 16px 35px;
+            font-size: 15px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            border-radius: 50px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #0b477a, #0e367a);
+            color: white;
+            box-shadow: 0 10px 30px rgba(12, 71, 235, 0.4);
+        }
+
+        .btn-primary::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transition: left 0.5s;
+        }
+
+        .btn-primary:hover::before {
+            left: 100%;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 15px 40px rgba(57, 118, 230, 0.6);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: hsl(0, 0%, 100%);
+            border: 2px solid #ffffff;
+            box-shadow: 0 0 20px rgba(0, 94, 255, 0.3);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(35, 50, 255, 0.1);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(230, 228, 228, 0.5);
+        }
+
+        .btn:disabled {
+            opacity: 0.3;
+            cursor: not-allowed;
+            transform: none !important;
+        }
+
+        /* Progress indicator */
+        .progress-bar {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            animation: slideDown 0.6s ease 0.6s both;
+        }
+
+        .progress-step {
+            flex: 1;
+            height: 4px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .progress-step.active {
+            background: linear-gradient(90deg, #c29b00, #c5280c, #ffffff);
+            box-shadow: 0 0 15px rgba(255, 215, 0, 0.8);
+            animation: progressGlow 1.5s ease-in-out infinite;
+        }
+
+        @keyframes progressGlow {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.6; }
+        }
+
+        .progress-step.active::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.8), transparent);
+            animation: progressSlide 1.5s linear infinite;
+        }
+
+        @keyframes progressSlide {
+            to { left: 100%; }
+        }
+
+        /* Skip button */
+        .skip-btn {
+            position: fixed;
+            top: 30px;
+            right: 30px;
+            padding: 12px 30px;
+            background: rgba(13, 27, 42, 0.8);
+            color: #FFD700;
+            border: 2px solid rgba(255, 215, 0, 0.4);
+            border-radius: 50px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+            z-index: 100;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .skip-btn:hover {
+            background: rgba(230, 57, 70, 0.3);
+            border-color: #E63946;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(230, 57, 70, 0.4);
+        }
+
+        /* Responsive */
+        @media (max-width: 968px) {
+            .container {
+                padding-left: 20px;
+                justify-content: center;
+            }
+
+            .card-container {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .content-section {
+                order: 2; /* En móvil, contenido abajo */
+            }
+
+            .visual-section {
+                order: 1; /* En móvil, visual arriba */
+                height: 300px;
+            }
+
+            .hologram {
+                width: 250px;
+                height: 250px;
+            }
+
+            .hologram-icon {
+                font-size: 80px;
+            }
+
+            h1 {
+                font-size: 32px;
+            }
+
+            p {
+                font-size: 16px;
+            }
+
+            .action-buttons {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+            }
+
+            .content-section {
+                padding: 30px 25px;
+            }
+        }
+
+        /* Partículas flotantes */
+        .particle {
+            position: fixed;
+            width: 4px;
+            height: 4px;
+            background: rgba(255, 215, 0, 0.6);
+            border-radius: 50%;
+            pointer-events: none;
+            animation: particleFloat 15s linear infinite;
+            z-index: 2;
+        }
+
+        @keyframes particleFloat {
+            0% {
+                transform: translateY(100vh) translateX(0) scale(0);
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
+            90% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-100vh) translateX(100px) scale(1);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="stars" id="stars"></div>
+
+    <a href="INICIO.HTML" class="skip-btn">Omitir</a>
+
+    <div class="container">
+        <!-- Screen 1 -->
+        <div class="screen active" id="screen1">
+            <div class="card-container">
+                <div class="content-section">
+                    <h1>Bienvenido al portal de la guerra espacial</h1>
+                    <p>Prepárate para un viaje épico a través de la historia más fascinante de la humanidad: la carrera espacial entre dos superpotencias.</p>
+                    
+                    <div class="action-buttons">
+                        <button class="btn btn-secondary" onclick="prevScreen()" disabled>← Atrás</button>
+                        <button class="btn btn-primary" onclick="nextScreen()">Continuar →</button>
+                    </div>
+
+                    <div class="progress-bar">
+                        <div class="progress-step active"></div>
+                        <div class="progress-step"></div>
+                        <div class="progress-step"></div>
+                    </div>
+                </div>
+
+                <div class="visual-section">
+                    <div class="hologram">
+                        <div class="hologram-ring ring-1"></div>
+                        <div class="hologram-ring ring-2"></div>
+                        <div class="hologram-ring ring-3"></div>
+                        <div class="hologram-icon">🚀</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Screen 2 -->
+        <div class="screen" id="screen2">
+            <div class="card-container">
+                <div class="content-section">
+
+                    <h1>La Gran Rivalidad</h1>
+                    <p>Desde el Sputnik hasta el Apollo 11, explora los momentos que definieron la competencia tecnológica más intensa del siglo XX.</p>
+                    
+                    <div class="action-buttons">
+                        <button class="btn btn-secondary" onclick="prevScreen()">← Atrás</button>
+                        <button class="btn btn-primary" onclick="nextScreen()">Continuar →</button>
+                    </div>
+
+                    <div class="progress-bar">
+                        <div class="progress-step"></div>
+                        <div class="progress-step active"></div>
+                        <div class="progress-step"></div>
+                    </div>
+                </div>
+
+                <div class="visual-section">
+                    <div class="hologram">
+                        <div class="hologram-ring ring-1"></div>
+                        <div class="hologram-ring ring-2"></div>
+                        <div class="hologram-ring ring-3"></div>
+                        <div class="hologram-icon">⚔️</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Screen 3 -->
+        <div class="screen" id="screen3">
+            <div class="card-container">
+                <div class="content-section">
+                    <h1>Accede a la Historia</h1>
+                    <p>Documentos históricos, cronologías detalladas, fotografías exclusivas y análisis profundos de cada misión que cambió nuestro mundo.</p>
+                    
+                    <div class="action-buttons">
+                        <button class="btn btn-secondary" onclick="prevScreen()">← Atrás</button>
+                        <a href="INICIO.HTML" style="text-decoration: none; flex: 1;">
+                            <button class="btn btn-primary" style="width: 100%;">Entrar al Portal</button>
+                        </a>
+                    </div>
+
+                    <div class="progress-bar">
+                        <div class="progress-step"></div>
+                        <div class="progress-step"></div>
+                        <div class="progress-step active"></div>
+                    </div>
+                </div>
+
+                <div class="visual-section">
+                    <div class="hologram">
+                        <div class="hologram-ring ring-1"></div>
+                        <div class="hologram-ring ring-2"></div>
+                        <div class="hologram-ring ring-3"></div>
+                        <div class="hologram-icon">📡</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Generar estrellas
+        const starsContainer = document.getElementById('stars');
+        for (let i = 0; i < 100; i++) {
+            const star = document.createElement('div');
+            star.className = 'star';
+            star.style.left = Math.random() * 100 + '%';
+            star.style.top = Math.random() * 100 + '%';
+            star.style.animationDelay = Math.random() * 3 + 's';
+            starsContainer.appendChild(star);
+        }
+
+        // Generar partículas
+        for (let i = 0; i < 20; i++) {
+            const particle = document.createElement('div');
+            particle.className = 'particle';
+            particle.style.left = Math.random() * 100 + '%';
+            particle.style.animationDelay = Math.random() * 15 + 's';
+            particle.style.animationDuration = (10 + Math.random() * 10) + 's';
+            document.body.appendChild(particle);
+        }
+
+        let currentScreen = 1;
+
+        function nextScreen() {
+            if (currentScreen < 3) {
+                currentScreen++;
+                updateScreen();
+            }
+        }
+
+        function prevScreen() {
+            if (currentScreen > 1) {
+                currentScreen--;
+                updateScreen();
+            }
+        }
+
+        function updateScreen() {
+            document.querySelectorAll('.screen').forEach(screen => {
+                screen.classList.remove('active');
+            });
+            document.getElementById('screen' + currentScreen).classList.add('active');
+        }
+
+        // Navegación con teclado
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'ArrowRight') nextScreen();
+            else if (e.key === 'ArrowLeft') prevScreen();
+        });
+    </script>
+</body>
+</html>

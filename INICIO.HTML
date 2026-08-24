@@ -1,0 +1,1970 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🚀 Carrera Espacial: USSR vs USA | Portal Interactivo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Estilo.css">
+    <link rel="stylesheet" href="Estilo-login.css">
+    
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="stars-bg" id="starsBg"></div>
+
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="logo">BattleSpace</div>
+            <div class="menu-toggle" onclick="toggleMenu()">
+
+            </div>
+            <ul class="menu" id="menu">
+                <li><a href="#que-fue">Inicio</a></li>
+                <li><a href="#videos">Videos</a></li>
+                <li><a href="#galeria">Galería</a></li>
+                <li><a href="#timeline">Cronología</a></li>
+                <li><a href="#comparacion">Comparación</a></li>
+                <li><a href="#datos">Datos</a></li>
+                <li><a href="#juego">Sección Interactiva</a></li>
+                 <a href="LOGIN.HTML" class="login-icon-btn" id="loginBtn">
+                <svg class="login-icon" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" d="M3 3a1 1 0 011 1v12a1 1 0 11-2 0V4a1 1 0 011-1zm7.707 3.293a1 1 0 010 1.414L9.414 9H17a1 1 0 110 2H9.414l1.293 1.293a1 1 0 01-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                </svg>
+                Iniciar Sesión
+            </a>
+            </ul>
+        </nav>
+    </header>
+
+    
+    <!-- Hero Section -->
+    <section class="hero" id="inicio">
+        <div class="hero-content">
+            <h1>La Carrera Espacial</h1>
+            <p class="hero-subtitle">USSR VS USA: La batalla por la luna</p>
+            <div class="cta-buttons">
+                <button class="btn btn-explore" onclick="document.getElementById('videos').scrollIntoView({behavior: 'smooth'})">
+                    <span>Explorar Ahora</span>
+                </button>
+                <button class="btn btn-secondary" onclick="document.getElementById('timeline').scrollIntoView({behavior: 'smooth'})">
+                    <span>Cronología</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+   <!-- Guerra Fría Section -->
+<!-- ¿Qué fue la Carrera Espacial? Section -->
+<section class="space-race-intro-section fade-in" id="que-fue">
+    <div class="space-race-intro-container">
+        <div class="space-race-text">
+            <h2 class="WIW">¿Qué fue la Carrera Espacial?</h2>
+            <p class="space-race-intro">
+                Imagina dos rivales mirando al cielo, cada uno queriendo llegar más alto que el otro. 
+                Eso fue la Carrera Espacial: una competencia épica por conquistar el espacio.
+            </p>
+            <p class="space-race-description">
+                Entre 1957 y 1975, la Unión Soviética y Estados Unidos protagonizaron la competencia 
+                tecnológica más fascinante de la historia. No se trataba solo de cohetes y satélites,
+                se trataba de demostrar quién era la superpotencia suprema.
+            </p>
+            <p class="space-race-description">
+                Cada lanzamiento era un logro nacional. Cada astronauta, un héroe. Cada fracaso, una 
+                humillación pública. La USSR sorprendió al mundo con el Sputnik y Gagarin. USA respondió 
+                con el Apollo y puso humanos en la Luna.
+            </p>
+            <div class="space-race-highlights">
+                <div class="highlight-item">
+                    <span class="highlight-icon">📅</span>
+                    <p><strong>Duración:</strong> 1957 - 1975 (18 años de competencia intensa)</p>
+                </div>
+                <div class="highlight-item">
+                    <span class="highlight-icon">💰</span>
+                    <p><strong>Inversión:</strong> Cientos de miles de millones de dólares</p>
+                </div>
+              
+            </div>
+        </div>
+
+        <div class="space-race-video">
+            <div class="video-wrapper">
+                <iframe 
+                    width="100%" 
+                    height="400" 
+                    src="https://www.youtube.com/embed/MhPs5kRjqq4?si=nsvpDIc-lOrP_3ps" 
+                    title="Carrera Espacial Explicada" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+            <p class="video-caption">
+                📹 La historia completa de cómo dos naciones compitieron por las estrellas
+            </p>
+        </div>
+    </div>
+</section>
+
+    <!-- Video Section -->
+    <section class="video-section fade-in" id="videos">
+        <h2 class="section-title">📺 Videos Históricos</h2>
+        <div class="video-grid">
+            <div class="video-card" onclick="openVideoModal(0)">
+                <div class="video-placeholder"><img src="sputnik-gallery.png" width="500px" height="200px"></div>
+                <div class="video-info">
+                    <h3>Sputnik 1: El Comienzo</h3>
+                    <p>El momento histórico que inició la carrera espacial. El lanzamiento del primer satélite artificial cambió el mundo para siempre.</p>
+                    <span class="video-badge">USSR</span>
+                </div>
+            </div>
+
+            <div class="video-card" onclick="openVideoModal(1)">
+                <div class="video-placeholder"><img src="YuriGangarin.jpeg" width="500px" height="200px"></div>
+                <div class="video-info">
+                    <h3>Yuri Gagarin: Primer Humano en el espacio</h3>
+                    <p>12 de abril de 1961. "La Tierra es azul". El cosmonauta soviético se convierte en el primer ser humano en el espacio.</p>
+                    <span class="video-badge">USSR</span>
+                </div>
+            </div>
+
+            <div class="video-card" onclick="openVideoModal(2)">
+                <div class="video-placeholder"><img src="Apollo11.webp" width="500px" height="200px"></div>
+                <div class="video-info">
+                    <h3>Apollo 11: Un Paso Gigante</h3>
+                    <p>20 de julio de 1969. Neil Armstrong pisa la Luna. "Un pequeño paso para el hombre, un gran salto para la humanidad."</p>
+                    <span class="video-badge usa">USA</span>
+                </div>
+            </div>
+
+            <div class="video-card" onclick="openVideoModal(3)">
+                <div class="video-placeholder"><img src="Caminata-espacial.webp" width="500px" height="200px"></div>
+                <div class="video-info">
+                    <h3>Primera Caminata Espacial</h3>
+                    <p>Alexei Leonov se aventura fuera de su nave en 1965. 12 minutos que casi terminan en tragedia pero marcaron la historia.</p>
+                    <span class="video-badge">USSR</span>
+                </div>
+            </div>
+
+            <div class="video-card" onclick="openVideoModal(4)">
+                <div class="video-placeholder"><img src="SaturnV.jpeg" width="500px" height="200px"></div>
+                <div class="video-info">
+                    <h3>Saturn V: La Bestia</h3>
+                    <p>El cohete más poderoso jamás construido. 111 metros de altura, 2,970 toneladas. La ingeniería que hizo posible el sueño lunar.</p>
+                    <span class="video-badge usa">USA</span>
+                </div>
+            </div>
+
+            <div class="video-card" onclick="openVideoModal(5)">
+                <div class="video-placeholder"><img src="Apollosoyuz.webp" width="500px" height="200px"></div>
+                <div class="video-info">
+                    <h3>Apollo-Soyuz: El Apretón</h3>
+                    <p>1975. El primer encuentro espacial internacional. El símbolo de que la cooperación puede vencer a la rivalidad.</p>
+                    <span class="video-badge">USSR</span>
+                    <span class="video-badge usa">USA</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery-section fade-in" id="galeria">
+        <h2 class="section-title">🖼️ Galería Histórica</h2>
+        <div class="gallery-grid">
+            <div class="gallery-item" onclick="openGalleryModal(0)">
+                <div class="gallery-img"><img src="Sputnik1.jpg" width="500px" height="220px"></div>
+                <div class="gallery-caption">
+                    <h4>Sputnik 1 (1957)</h4>
+                    <p>83.6 kg de tecnología que cambió el mundo</p>
+                </div>
+            </div>
+
+            <div class="gallery-item" onclick="openGalleryModal(1)">
+                <div class="gallery-img"><img src="Laika-gallery.jpeg" width="500px" height="220px"></div>
+                <div class="gallery-caption">
+                    <h4>Laika - La Pionera</h4>
+                    <p>Primera criatura viviente en orbitar la Tierra</p>
+                </div>
+            </div>
+
+            <div class="gallery-item" onclick="openGalleryModal(2)">
+                <div class="gallery-img"><img src="Yuri-gallery.jpg" width="500px" height="220px"></div>
+                <div class="gallery-caption">
+                    <h4>Yuri Gagarin</h4>
+                    <p>108 minutos que hicieron historia</p>
+                </div>
+            </div>
+
+            <div class="gallery-item" onclick="openGalleryModal(3)">
+                <div class="gallery-img"><img src="Valentina-gallery.jpeg" width="500px" height="220px"></div>
+                <div class="gallery-caption">
+                    <h4>Valentina Tereshkova</h4>
+                    <p>Primera mujer en el espacio (1963)</p>
+                </div>
+            </div>
+
+            <div class="gallery-item" onclick="openGalleryModal(4)">
+                <div class="gallery-img"><img src="Saturn-gallery.jpg" width="1000px" height="220px"></div>
+                <div class="gallery-caption">
+                    <h4>Saturn V</h4>
+                    <p>El gigante que conquistó la Luna</p>
+                </div>
+            </div>
+
+            <div class="gallery-item" onclick="openGalleryModal(5)">
+                <div class="gallery-img"><img src="Huella-gallery.jpeg" width="500px" height="220px"></div>
+                <div class="gallery-caption">
+                    <h4>Huella Lunar</h4>
+                    <p>El símbolo eterno del logro humano</p>
+                </div>
+            </div>
+
+            <div class="gallery-item" onclick="openGalleryModal(6)">
+                <div class="gallery-img"><img src="Earthrise-gallery.webp" width="500px" height="220px"></div>
+                <div class="gallery-caption">
+                    <h4>Earthrise (1968)</h4>
+                    <p>La foto que cambió nuestra perspectiva</p>
+                </div>
+            </div>
+
+            <div class="gallery-item" onclick="openGalleryModal(7)">
+                <div class="gallery-img"><img src="apollo_soyuz-gallery.jpg" width="500px" height="220px"></div>
+                <div class="gallery-caption">
+                    <h4>Apollo-Soyuz</h4>
+                    <p>El inicio de la cooperación espacial</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Horizontal Timeline -->
+    <section class="timeline-section fade-in" id="timeline">
+        <h2 class="section-title">⏱️ Linea De Tiempo De Los Hechos</h2>
+        <div class="timeline-container">
+            <div class="timeline-scroll">
+                <div class="timeline-track">
+                    <div class="timeline-line"></div>
+<div class="timeline-event ussr">
+    <img src="https://staticgeopop.akamaized.net/wp-content/uploads/sites/32/2022/10/sputnik-1.jpg" 
+         alt="Sputnik 1" 
+         class="timeline-event-image">
+    <div class="timeline-event-image-overlay"></div>
+    <span class="timeline-flag">🇷🇺</span>
+    <div class="timeline-event-content">
+        <div class="timeline-year">1957</div>
+        <h4>Sputnik 1</h4>
+        <p>El primer satélite artificial orbita la Tierra, desatando la "Crisis del Sputnik" en Estados Unidos.</p>
+    </div>
+</div>
+
+<div class="timeline-event ussr">
+    <img src="https://th.bing.com/th/id/R.4eb40212aea0d215db9e6f63c22f0e02?rik=LkeasQC7vJak4w&pid=ImgRaw&r=0" 
+         alt="Laika al Espacio" 
+         class="timeline-event-image">
+    <div class="timeline-event-image-overlay"></div>
+    <span class="timeline-flag">🇷🇺</span>
+    <div class="timeline-event-content">
+        <div class="timeline-year">1957</div>
+        <h4>Laika al Espacio</h4>
+        <p>Sputnik 2 lleva a Laika, demostrando que los seres vivos pueden sobrevivir al lanzamiento orbital.</p>
+    </div>
+</div>
+
+<div class="timeline-event usa">
+    <img src="https://image.pbs.org/poster_images/assets/2_The_Rocket_NASA_is_Born.jpg" 
+         alt="Nace la NASA" 
+         class="timeline-event-image">
+    <div class="timeline-event-image-overlay"></div>
+    <span class="timeline-flag">🇺🇸</span>
+    <div class="timeline-event-content">
+        <div class="timeline-year">1958</div>
+        <h4>Nace la NASA</h4>
+        <p>Estados Unidos crea la Administración Nacional de Aeronáutica y del Espacio en respuesta al Sputnik.</p>
+    </div>
+</div>
+
+<div class="timeline-event ussr">
+    <img src="https://www.esa.int/var/esa/storage/images/esa_multimedia/images/2011/03/yuri_gagarin5/10023593-2-eng-GB/Yuri_Gagarin_pillars.jpg" 
+         alt="Yuri Gagarin" 
+         class="timeline-event-image">
+    <div class="timeline-event-image-overlay"></div>
+    <span class="timeline-flag">🇷🇺</span>
+    <div class="timeline-event-content">
+        <div class="timeline-year">1961</div>
+        <h4>Yuri Gagarin</h4>
+        <p>Primer ser humano en viajar al espacio y orbitar la Tierra a bordo de Vostok 1.</p>
+    </div>
+</div>
+
+<div class="timeline-event usa">
+    <img src="https://th.bing.com/th/id/R.2fa7428dca0e55d68f786ceae0fcd0ac?rik=rkJa2KyH4vNgFA&pid=ImgRaw&r=0" 
+         alt="Discurso de Kennedy" 
+         class="timeline-event-image">
+    <div class="timeline-event-image-overlay"></div>
+    <span class="timeline-flag">🇺🇸</span>
+    <div class="timeline-event-content">
+        <div class="timeline-year">1961</div>
+        <h4>Discurso de Kennedy</h4>
+        <p>"Llevar un hombre a la Luna antes del fin de la década". El compromiso que definió la era.</p>
+    </div>
+</div>
+
+<div class="timeline-event usa">
+    <img src="https://www.eluniversal.com.mx/resizer/v2/6HY5OF4KDZBO3EPPLEU3WZJGWM.jpg?auth=70accb32381ab9fdf4ec3b0fadbef41d97afe67ddc3b0a3bfb5f6d4025e6862e&width=1100&height=666" 
+         alt="John Glenn Orbita" 
+         class="timeline-event-image">
+    <div class="timeline-event-image-overlay"></div>
+    <span class="timeline-flag">🇺🇸</span>
+    <div class="timeline-event-content">
+        <div class="timeline-year">1962</div>
+        <h4>John Glenn Orbita</h4>
+        <p>Primer estadounidense en orbitar la Tierra a bordo de Friendship 7.</p>
+    </div>
+</div>
+
+<div class="timeline-event ussr">
+    <img src="https://th.bing.com/th/id/R.4c13e26ca577eb2bd5a077bcf618a75e?rik=AWTjxZy1SjyE5Q&pid=ImgRaw&r=0" 
+         alt="Valentina Tereshkova" 
+         class="timeline-event-image">
+    <div class="timeline-event-image-overlay"></div>
+    <span class="timeline-flag">🇷🇺</span>
+    <div class="timeline-event-content">
+        <div class="timeline-year">1963</div>
+        <h4>Valentina Tereshkova</h4>
+        <p>Primera mujer en el espacio, completando 48 órbitas en casi 3 días.</p>
+    </div>
+</div>
+
+<div class="timeline-event ussr">
+    <img src="https://images.unsplash.com/photo-1454789548928-9efd52dc4031?w=400&h=300&fit=crop" 
+         alt="Caminata Espacial" 
+         class="timeline-event-image">
+    <div class="timeline-event-image-overlay"></div>
+    <span class="timeline-flag">🇷🇺</span>
+    <div class="timeline-event-content">
+        <div class="timeline-year">1965</div>
+        <h4>Caminata Espacial</h4>
+        <p>Alexei Leonov realiza la primera actividad extravehicular: 12 minutos históricos.</p>
+    </div>
+</div>
+
+<div class="timeline-event usa">
+    <img src="https://tse3.mm.bing.net/th/id/OIP.4Pqh1zwweO8r3il5L69LKQHaF3?rs=1&pid=ImgDetMain&o=7&rm=3" 
+         alt="Programa Gemini" 
+         class="timeline-event-image">
+    <div class="timeline-event-image-overlay"></div>
+    <span class="timeline-flag">🇺🇸</span>
+    <div class="timeline-event-content">
+        <div class="timeline-year">1965-66</div>
+        <h4>Programa Gemini</h4>
+        <p>10 misiones perfeccionan acoplamiento orbital, caminatas espaciales y técnicas para Apollo.</p>
+    </div>
+</div>
+
+<div class="timeline-event usa">
+    <img src="https://th.bing.com/th/id/R.f76c465bd93405c3a7168d9b4bca975e?rik=A66Jzm4fR5d3cA&riu=http%3a%2f%2fd279m997dpfwgl.cloudfront.net%2fwp%2f2018%2f12%2fAP_6801010932-1000x667.jpg&ehk=bS6D7oy%2b%2bO3anTZDMAxoT2tzgL5Mkf3GyK2q%2bUH8dzU%3d&risl=&pid=ImgRaw&r=0" 
+         alt="Apollo 8 a la Luna" 
+         class="timeline-event-image">
+    <div class="timeline-event-image-overlay"></div>
+    <span class="timeline-flag">🇺🇸</span>
+    <div class="timeline-event-content">
+        <div class="timeline-year">1968</div>
+        <h4>Apollo 8 a la Luna</h4>
+        <p>Primera misión tripulada en orbitar la Luna. La foto "Earthrise" cambia nuestra perspectiva.</p>
+    </div>
+</div>
+
+<div class="timeline-event usa">
+    <img src="https://apod.nasa.gov/apod/image/1707/AS11-40-5872HR.jpg" 
+         alt="¡ALUNIZAJE!" 
+         class="timeline-event-image">
+    <div class="timeline-event-image-overlay"></div>
+    <span class="timeline-flag">🇺🇸</span>
+    <div class="timeline-event-content">
+        <div class="timeline-year">1969</div>
+        <h4>¡ALUNIZAJE!</h4>
+        <p>Apollo 11. Armstrong y Aldrin en la Luna. 600 millones de personas lo ven en vivo.</p>
+    </div>
+</div>
+
+<div class="timeline-event ussr">
+    <img src="https://th.bing.com/th/id/R.05fbd6657e4f4ecee547c75c5b52d0ef?rik=Vo%2fH88kkRpaFaA&pid=ImgRaw&r=0" 
+         alt="Salyut 1" 
+         class="timeline-event-image">
+    <div class="timeline-event-image-overlay"></div>
+    <span class="timeline-flag">🇷🇺</span>
+    <div class="timeline-event-content">
+        <div class="timeline-year">1971</div>
+        <h4>Salyut 1</h4>
+        <p>Primera estación espacial de la historia, iniciando la era de habitabilidad prolongada.</p>
+    </div>
+</div>
+
+<div class="timeline-event usa">
+    <img src="https://th.bing.com/th/id/R.14804291fb5f041be247a75dceb84004?rik=44E8ip1yObKt8g&pid=ImgRaw&r=0" 
+         alt="Apollo 17" 
+         class="timeline-event-image">
+    <div class="timeline-event-image-overlay"></div>
+    <span class="timeline-flag">🇺🇸</span>
+    <div class="timeline-event-content">
+        <div class="timeline-year">1972</div>
+        <h4>Apollo 17</h4>
+        <p>Última misión lunar. Eugene Cernan es el último humano en pisar la Luna... hasta ahora.</p>
+    </div>
+</div>
+
+<div class="timeline-event">
+    <img src="https://cdn-cavok.nuneshost.com/wp-content/uploads/2021/10/apollo-soyuz.jpg" 
+         alt="Apollo-Soyuz" 
+         class="timeline-event-image">
+    <div class="timeline-event-image-overlay"></div>
+    <span class="timeline-flag">🤝</span>
+    <div class="timeline-event-content">
+        <div class="timeline-year">1975</div>
+        <h4>Apollo-Soyuz</h4>
+        <p>Primer acoplamiento internacional. El apretón de manos que simbolizó el fin de la rivalidad.</p>
+    </div>
+</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparison Section -->
+    <section class="comparison-section fade-in" id="comparacion">
+        <h2 class="section-title">⚔️Diferencias De Hazañas</h2>
+        <div class="comparison-container">
+            <!-- USSR Side -->
+            <div class="comparison-side ussr">
+                <div class="comparison-header">
+                    <div class="comparison-flag">🇷🇺</div>
+                    <h3>UNIÓN SOVIÉTICA</h3>
+                    <p style="color: var(--light-blue);">Los Pioneros del Espacio</p>
+                </div>
+
+                <div class="achievement-item">
+                    <h5>🛰️ PRIMER SATÉLITE</h5>
+                    <p><strong>Sputnik 1</strong> - 4 octubre 1957<br>83.6 kg que sorprendieron al mundo</p>
+                </div>
+
+                <div class="achievement-item">
+                    <h5>🐕 PRIMER SER VIVO</h5>
+                    <p><strong>Laika</strong> - 3 noviembre 1957<br>Sputnik 2, demostrando viabilidad biológica</p>
+                </div>
+
+                <div class="achievement-item">
+                    <h5>👨‍🚀 PRIMER HUMANO</h5>
+                    <p><strong>Yuri Gagarin</strong> - 12 abril 1961<br>Vostok 1, 108 minutos en órbita</p>
+                </div>
+
+                <div class="achievement-item">
+                    <h5>👩‍🚀 PRIMERA MUJER</h5>
+                    <p><strong>Valentina Tereshkova</strong> - 16 junio 1963<br>Vostok 6, 48 órbitas en 3 días</p>
+                </div>
+
+                <div class="achievement-item">
+                    <h5>🚶 PRIMERA CAMINATA</h5>
+                    <p><strong>Alexei Leonov</strong> - 18 marzo 1965<br>Voskhod 2, 12 minutos históricos</p>
+                </div>
+
+                <div class="achievement-item">
+                    <h5>🏠 PRIMERA ESTACIÓN</h5>
+                    <p><strong>Salyut 1</strong> - 19 abril 1971<br>Habitabilidad espacial prolongada</p>
+                </div>
+            </div>
+
+            <!-- USA Side -->
+            <div class="comparison-side usa">
+                <div class="comparison-header">
+                    <div class="comparison-flag">🇺🇸</div>
+                    <h3>ESTADOS UNIDOS</h3>
+                    <p style="color: var(--light-blue);">Los Conquistadores de la Luna</p>
+                </div>
+
+                <div class="achievement-item">
+                    <h5>🚀 PROGRAMA MERCURY</h5>
+                    <p><strong>Alan Shepard</strong> - 5 mayo 1961<br>Primer estadounidense en el espacio</p>
+                </div>
+
+                <div class="achievement-item">
+                    <h5>🌍 PROGRAMA GEMINI</h5>
+                    <p><strong>10 Misiones</strong> - 1965-1966<br>Perfeccionamiento de técnicas espaciales</p>
+                </div>
+
+                <div class="achievement-item">
+                    <h5>🌕 PRIMER ALUNIZAJE</h5>
+                    <p><strong>Apollo 11</strong> - 20 julio 1969<br>Armstrong y Aldrin en la Luna</p>
+                </div>
+
+                <div class="achievement-item">
+                    <h5>🔬 6 ALUNIZAJES</h5>
+                    <p><strong>Apollo 11, 12, 14, 15, 16, 17</strong><br>12 humanos caminaron en la Luna</p>
+                </div>
+
+                <div class="achievement-item">
+                    <h5>🔧 ACOPLAMIENTO</h5>
+                    <p><strong>Gemini 8</strong> - 16 marzo 1966<br>Primera unión de naves en órbita</p>
+                </div>
+
+                <div class="achievement-item">
+                    <h5>🛸 SKYLAB</h5>
+                    <p><strong>Skylab</strong> - 1973<br>Primera estación espacial estadounidense</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Data Section -->
+    <section class="data-section fade-in" id="datos">
+        <h2 class="section-title">📊 Datos Interesantes</h2>
+        <div class="data-grid">
+            <div class="data-card">
+                <div class="data-icon">💰</div>
+                <h4>Inversión Masiva</h4>
+                <p>Estados Unidos invirtió aproximadamente <span class="data-highlight">$280 mil millones</span> (ajustado a inflación) en el programa espacial durante la década de 1960. El programa Apollo solo costó <span class="data-highlight">$25.4 mil millones</span> de la época.</p>
+            </div>
+
+            <div class="data-card">
+                <div class="data-icon">⚡</div>
+                <h4>Poder del Saturn V</h4>
+                <p>El cohete Saturn V generaba <span class="data-highlight">7.6 millones de libras</span> de empuje al despegar. Era tan poderoso que las vibraciones podían sentirse a <span class="data-highlight">más de 5 km</span> de distancia.</p>
+            </div>
+
+            <div class="data-card">
+                <div class="data-icon">👥</div>
+                <h4>Fuerza Laboral</h4>
+                <p>En su punto máximo, la NASA empleó a <span class="data-highlight">más de 400,000 personas</span> trabajando en el programa Apollo, incluyendo contratistas y universidades.</p>
+            </div>
+
+            <div class="data-card">
+                <div class="data-icon">🌡️</div>
+                <h4>Temperaturas Extremas</h4>
+                <p>En la Luna, las temperaturas varían de <span class="data-highlight">127°C al sol</span> a <span class="data-highlight">-173°C en la sombra</span>. Los trajes espaciales debían proteger contra ambos extremos.</p>
+            </div>
+
+            <div class="data-card">
+                <div class="data-icon">📡</div>
+                <h4>Comunicación Lunar</h4>
+                <p>Las señales de radio desde la Luna tardaban <span class="data-highlight">1.3 segundos</span> en llegar a la Tierra, viajando a <span class="data-highlight">300,000 km/s</span>.</p>
+            </div>
+
+            <div class="data-card">
+                <div class="data-icon">🪨</div>
+                <h4>Muestras Lunares</h4>
+                <p>Las misiones Apollo trajeron <span class="data-highlight">382 kg</span> de rocas y suelo lunar. Estas muestras siguen siendo estudiadas hoy en día.</p>
+            </div>
+
+            <div class="data-card">
+                <div class="data-icon">💻</div>
+                <h4>Computación Primitiva</h4>
+                <p>El computador de navegación del Apollo 11 tenía <span class="data-highlight">64 KB de memoria</span>. Un iPhone moderno es millones de veces más potente.</p>
+            </div>
+
+            <div class="data-card">
+                <div class="data-icon">⏱️</div>
+                <h4>Récord de Velocidad</h4>
+                <p>Los astronautas del Apollo 10 alcanzaron <span class="data-highlight">39,897 km/h</span> durante el regreso a la Tierra: el récord humano de velocidad.</p>
+            </div>
+        </div>
+    </section>
+
+      <section class="data-section fade-in" id="juego">
+        <h2 class="JUEGO">Cambia La Historia<br><strong>¡DIVIERTETE!</h2></strong> 
+    <div id="gameWrapper">
+    <div id="gameContainer">
+
+     <div id="startScreen" style="
+    position: absolute;
+    border-radius: 30px;
+    inset: 0;
+    background: rgba(0,0,0,0.85);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    color: white;
+    font-family: Arial;
+    text-align: center;
+">
+    <h1 style="font-size: 20px; margin-top: 40px;">
+    <p style="font-size: 30px; max-width: 600px; font-family: 'Courier New', Courier, monospace;">
+       <p style="color: red;"> USSR </p> vs  <p style="color: rgb(34, 86, 255);"> USA </p> <br>
+         Esquiva asteroides, supera al cohete enemigo  
+        ¡llega primero a la Luna!
+    </p> </h1>
+
+    <button id="startBtn" style="
+        margin-top: 40px;
+        padding: 15px 35px;
+        font-size: 22px;
+        border: none;
+        border-radius: 20px;
+        cursor: pointer;
+        background: linear-gradient(45deg, #0a0337, #0b0163);
+        color: white;
+        font-weight: bold;
+        transition: 0.3s;
+    ">Empezar</button>
+</div>
+
+        <canvas id="gameCanvas" width="700" height="400"></canvas>
+<button id="pauseBtn" style="
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 12px 12px;
+    font-size: 23px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    background: linear-gradient(135deg, #ffffff00, #ffffff00);
+    color: #000;
+    font-weight: bold;
+    transition: all 0.3s;
+    z-index: 100;
+    display: none;
+">⏸️</button>
+
+<!-- Pantalla de pausa -->
+<div id="pauseScreen" style="
+    position: absolute;
+    border-radius: 30px;
+    inset: 0;
+    background: rgba(0,0,0,0.92);
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 998;
+    color: white;
+    font-family: Arial;
+    text-align: center;
+">
+    <h1 style="font-size: 60px; margin-bottom: 20px; text-shadow: 0 0 20px rgba(255, 215, 0, 0.6);">⏸️ PAUSA</h1>
+    <p style="font-size: 22px; margin-bottom: 40px; color: #ccc;">El juego está pausado</p>
+    <button id="resumeBtn" style="
+        padding: 16px 40px;
+        font-size: 24px;
+        border: none;
+        border-radius: 20px;
+        cursor: pointer;
+        background: linear-gradient(135deg, #45A29E, #66FCF1);
+        color: #000;
+        font-weight: bold;
+        transition: all 0.3s;
+        box-shadow: 0 5px 20px rgba(69, 162, 158, 0.5);
+    ">▶️ Continuar</button>
+</div>
+        <div id="ui">
+            <div class="stat">
+                <div>USSR</div>
+                <div>Altitud: <span id="playerAlt">0</span>m</div>
+            </div>
+            <div class="stat">
+                <div>Tiempo: <span id="timer">60</span>s</div>
+                <div>Meta: 8000m</div>
+            </div>
+            <div class="stat">
+                <div>USA</div>
+                <div>Altitud: <span id="botAlt">0</span>m</div>
+            </div>
+        </div>
+
+        <div id="gameOver">
+            <h1 id="resultTitle">¡Victoria!</h1>
+            <p id="resultMessage"></p>
+            <button onclick="location.reload()">Jugar de Nuevo</button>
+        </div>
+    </div>
+</div>
+</section
+
+<!-- Sección: ¿Quieres Otro Juego? -->
+<section class="another-game-section fade-in">
+    <div class="another-game-container">
+        <h2>🎮 ¿Quieres Otro Juego?</h2>
+        <p>Pon a prueba tus conocimientos sobre la carrera espacial</p>
+        <button class="quiz-btn" onclick="startQuiz()">
+            <span>🚀 Iniciar Quiz Espacial</span>
+        </button>
+    </div>
+</section>
+
+<!-- Sección del Quiz (inicialmente oculta) -->
+<section class="quiz-section" id="quizSection" style="display: none;">
+    <div class="quiz-container">
+        <div class="quiz-header">
+            <h2>🌌 Quiz: Carrera Espacial</h2>
+            <div class="quiz-stats">
+                <span class="quiz-question-count">Pregunta <span id="currentQuestion">1</span> de 10</span>
+                <span class="quiz-score">Puntuación: <span id="score">0</span></span>
+                 <button class="quiz-close-btn" onclick="closeQuiz()" title="Cerrar Quiz">✖️</button>
+            </div>
+        </div>
+
+        <div class="quiz-content" id="quizContent">
+            <div class="question-card">
+                <h3 id="questionText"></h3>
+                <div class="options-grid" id="optionsGrid"></div>
+            </div>
+        </div>
+
+        <div class="quiz-result" id="quizResult" style="display: none;">
+            <div class="result-card">
+                <h2>🎉 ¡Quiz Completado!</h2>
+                <div class="final-score">
+                    <span class="score-number" id="finalScore">0</span>
+                    <span class="score-total">/ 100 puntos</span>
+                </div>
+                <p class="result-message" id="resultMessage"></p>
+                <div class="result-actions">
+                    <button class="btn-restart" onclick="restartQuiz()">🔄 Reintentar</button>
+                    <button class="btn-close" onclick="closeQuiz()">✖️ Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>🚀 La Carrera Espacial</h4>
+                <p style="color: var(--light-blue); line-height: 1.8;">
+                    Un portal interactivo dedicado a explorar uno de los períodos más fascinantes de la historia humana: la competencia tecnológica y científica entre la USSR y USA por la conquista del espacio.
+                </p>
+            </div>
+
+            <div class="footer-section">
+                <h4>Navegación</h4>
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#videos">Videos</a></li>
+                    <li><a href="#galeria">Galería</a></li>
+                    <li><a href="#timeline">Cronología</a></li>
+                    <li><a href="#comparacion">Comparación</a></li>
+                    <li><a href="#datos">Datos</a></li>
+                    <li><a href="#quiz">Quiz</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Recursos</h4>
+                <ul>
+                    <li><a href="#">NASA Archives</a></li>
+                    <li><a href="#">Roscosmos</a></li>
+                    <li><a href="#">Smithsonian</a></li>
+                    <li><a href="#">Documentación</a></li>
+                    <li><a href="#">Bibliografía</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Contacto</h4>
+                <ul>
+                    <li><a href="#">info@carrearaespacial.com</a></li>
+                    <li><a href="#">Sobre Nosotros</a></li>
+                    <li><a href="#">Términos de Uso</a></li>
+                    <li><a href="#">Privacidad</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2025 Portal Carrera Espacial. Desarrollado con fines educativos. Todos los derechos reservados.</p>
+            <p style="margin-top: 0.5rem; font-size: 0.9rem;">🌟 "La Tierra es azul" - Yuri Gagarin | "Un gran salto para la humanidad" - Neil Armstrong 🌟</p>
+        </div>
+    </footer>
+
+    <!-- Modal -->
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal()">×</button>
+            <div id="modalContent"></div>
+        </div>
+    </div>
+
+    <script>
+        // Create animated stars background
+
+        
+        function createStars() {
+            const starsBg = document.getElementById('starsBg');
+            
+            // Create static twinkling stars
+            for (let i = 0; i < 150; i++) {
+                const star = document.createElement('div');
+                star.className = 'star';
+                star.style.left = Math.random() * 100 + '%';
+                star.style.top = Math.random() * 100 + '%';
+                star.style.animationDelay = Math.random() * 4 + 's';
+                starsBg.appendChild(star);
+            }
+
+            // Create shooting stars
+            for (let i = 0; i < 5; i++) {
+                const shootingStar = document.createElement('div');
+                shootingStar.className = 'shooting-star';
+                shootingStar.style.left = Math.random() * 100 + '%';
+                shootingStar.style.top = Math.random() * 50 + '%';
+                shootingStar.style.animationDelay = Math.random() * 3 + 's';
+                starsBg.appendChild(shootingStar);
+            }
+        }
+
+        createStars();
+
+        // Mobile menu toggle
+        function toggleMenu() {
+            document.getElementById('menu').classList.toggle('active');
+        }
+
+        // Close menu when clicking on links
+        document.querySelectorAll('.menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('menu').classList.remove('active');
+            });
+        });
+
+        // Stats counter animation
+        function animateCounter(element) {
+            const target = parseInt(element.getAttribute('data-target'));
+            const duration = 2000;
+            const step = target / (duration / 16);
+            let current = 0;
+
+            const timer = setInterval(() => {
+                current += step;
+                if (current >= target) {
+                    element.textContent = target;
+                    clearInterval(timer);
+                } else {
+                    element.textContent = Math.floor(current);
+                }
+            }, 16);
+        }
+
+        // Intersection Observer for scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    
+                    // Animate counters when stats section is visible
+                    if (entry.target.classList.contains('stats-section')) {
+                        const counters = entry.target.querySelectorAll('.stat-number');
+                        counters.forEach(counter => {
+                            if (counter.textContent === '0') {
+                                animateCounter(counter);
+                            }
+                        });
+                    }
+                }
+            });
+        }, observerOptions);
+
+        // Observe all fade-in elements
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+        // Video Modal Data
+       // Video Modal Data con URLs de YouTube
+        const videoData = [
+            {
+                title: "Sputnik 1: El Despertar de la Era Espacial",
+                emoji: "🛰️",
+                videoUrl: "https://www.youtube.com/embed/b5QtZPo12iU?si=pB_NJHQojz2X6nFV",
+                description: "El 4 de octubre de 1957, la Unión Soviética lanzó el Sputnik 1, el primer satélite artificial de la historia. Con solo 58 cm de diámetro y 83.6 kg de peso, este objeto metálico emitió señales de radio que podían ser captadas por radioaficionados de todo el mundo. Su 'beep-beep' característico causó asombro, admiración y pánico en Occidente, especialmente en Estados Unidos, donde se conoció como la 'Crisis del Sputnik'. Este evento marcó el inicio oficial de la carrera espacial y demostró la superioridad tecnológica soviética en ese momento. El satélite orbitó la Tierra durante tres semanas hasta que sus baterías se agotaron, pero su impacto duró décadas."
+            },
+            {
+                title: "Yuri Gagarin: El Primer Ser Humano en el Espacio",
+                emoji: "👨‍🚀",
+                videoUrl: "https://www.youtube.com/embed/LNG-t1xmhiU?si=iNOQxdu_hKrwn2ft",
+                description: "El 12 de abril de 1961, Yuri Gagarin se convirtió en el primer ser humano en viajar al espacio exterior. A bordo de la nave Vostok 1, completó una órbita completa alrededor de la Tierra en 108 minutos, alcanzando una altitud máxima de 327 kilómetros. Durante el vuelo, Gagarin pronunció las famosas palabras 'La Tierra es azul'. El vuelo no estuvo exento de riesgos: el cosmonauta no tenía control manual de la nave, y durante el reingreso, la cápsula giró violentamente durante 10 minutos antes de que se separara del módulo de servicio. Gagarin eyectó de la cápsula a 7 km de altura y descendió en paracaídas por separado, aunque oficialmente se reportó que aterrizó dentro de la cápsula para cumplir con los requisitos de récord de la FAI. Este logro convirtió a Gagarin en un héroe internacional instantáneo."
+            },
+            {
+                title: "Apollo 11: Un Gran Salto para la Humanidad",
+                emoji: "🌕",
+                videoUrl: "https://www.youtube.com/embed/z-N3-2YTawI?si=8QaMpDhfiM8npC2D",
+                description: "El 20 de julio de 1969, Neil Armstrong y Buzz Aldrin alunizaron en el Mar de la Tranquilidad mientras Michael Collins orbitaba arriba en el módulo de comando 'Columbia'. A las 02:56 UTC del 21 de julio, Armstrong bajó por la escalera del módulo lunar 'Eagle' y pisó la superficie lunar, pronunciando las palabras inmortales: 'Es un pequeño paso para el hombre, un gran salto para la humanidad'. Aldrin lo siguió 19 minutos después. Durante 2 horas y 31 minutos, los astronautas recolectaron 21.5 kg de material lunar, realizaron experimentos científicos y plantaron la bandera estadounidense. La transmisión fue vista por aproximadamente 600 millones de personas, casi una quinta parte de la población mundial en ese momento. Este logro cumplió el compromiso del presidente Kennedy de llevar a un hombre a la Luna antes del fin de la década."
+            },
+            {
+                title: "Alexei Leonov: La Primera Caminata Espacial",
+                emoji: "🚶",
+                videoUrl: "https://www.youtube.com/embed/99T84wpmJvw?si=KNfN4f27Tole5Hrd",
+                description: "El 18 de marzo de 1965, Alexei Leonov realizó la primera actividad extravehicular (EVA) de la historia durante la misión Voskhod 2. La caminata espacial duró 12 minutos y 9 segundos, pero estuvo llena de peligros que no se hicieron públicos hasta años después. En el vacío del espacio, el traje de Leonov se infló tanto que no podía alcanzar los controles de su cámara ni regresar a la esclusa de aire. Con el oxígeno disminuyendo y enfrentando la posibilidad de muerte, Leonov tomó la arriesgada decisión de reducir la presión de su traje a niveles peligrosamente bajos. Esto le permitió encogerse lo suficiente para entrar de cabeza en la esclusa (en lugar de con los pies primero como estaba planeado). El esfuerzo físico fue tan intenso que perdió 6 kg durante la misión. A pesar de los peligros, la caminata espacial fue un éxito y demostró que los humanos podían trabajar fuera de sus naves."
+            },
+            {
+                title: "Saturn V: El Cohete Más Poderoso de la Historia",
+                emoji: "🚀",
+                videoUrl: "https://www.youtube.com/embed/KOygw3QfO9o?si=yP4IJokiNUbQ",
+                description: "El Saturn V sigue siendo el vehículo de lanzamiento más potente jamás construido que ha completado misiones exitosas. Diseñado por un equipo liderado por Wernher von Braun, este gigante de 111 metros de altura y 2,970 toneladas podía llevar 140 toneladas a órbita baja terrestre o 48 toneladas a la Luna. Constaba de tres etapas: la primera (S-IC) con cinco motores F-1 generaba 7.6 millones de libras de empuje; la segunda (S-II) usaba cinco motores J-2; y la tercera (S-IVB) un motor J-2. Durante el despegue, el ruido era tan intenso que la NASA roció agua en la plataforma de lanzamiento para absorber las ondas sonoras. Las vibraciones podían sentirse a más de 5 kilómetros de distancia. Se construyeron 13 cohetes Saturn V entre 1967 y 1973, y todos los lanzamientos fueron exitosos. El costo de cada cohete era de aproximadamente $185 millones de dólares de la época ($1.23 mil millones ajustado a la inflación de hoy)."
+            },
+            {
+                title: "Apollo-Soyuz: El Apretón de Manos en el Espacio",
+                emoji: "🤝",
+                videoUrl: "https://www.youtube.com/embed/je4VRfEL1c8?si=FZ8Lzgj0QSblVGVo",
+                description: "El 17 de julio de 1975, las naves espaciales Apollo y Soyuz 19 se acoplaron en órbita terrestre, marcando el primer proyecto espacial conjunto entre Estados Unidos y la Unión Soviética. Los comandantes Thomas Stafford (USA) y Alexei Leonov (USSR) se dieron un histórico apretón de manos en el espacio, simbolizando el fin de la carrera espacial y el inicio de una era de cooperación. El proyecto requirió años de preparación, incluyendo el desarrollo de un módulo de acoplamiento especial que permitía a las dos naves con sistemas incompatibles unirse. Las tripulaciones permanecieron acopladas durante 44 horas, realizaron experimentos conjuntos, compartieron comidas y demostraron que la cooperación internacional en el espacio era posible. Este evento ocurrió durante la distensión (détente) de la Guerra Fría y sentó las bases para futuras colaboraciones, culminando eventualmente en la Estación Espacial Internacional."
+            }
+        ];
+
+        // Gallery Modal Data
+        const galleryData = [
+            {
+                title: "Sputnik 1 - El Satélite que Cambió el Mundo",
+                emoji: "🛰️",
+                description: "El Sputnik 1 era una esfera de aluminio de 58 cm de diámetro con cuatro antenas de radio externas. Pesaba 83.6 kg y contenía baterías que alimentaban dos transmisores de radio. Orbitaba la Tierra cada 96.2 minutos a una velocidad de 29,000 km/h. Su nombre significa 'compañero de viaje' o 'satélite' en ruso. El satélite transmitió durante 21 días hasta que se agotaron sus baterías el 26 de octubre de 1957. Continuó en órbita hasta el 4 de enero de 1958, cuando se desintegró al reingresar a la atmósfera terrestre después de completar 1,440 órbitas."
+            },
+            {
+                title: "Laika - La Heroína Canina del Espacio",
+                emoji: "🐕",
+                description: "Laika fue una perra callejera de Moscú que se convirtió en el primer ser vivo en orbitar la Tierra a bordo del Sputnik 2 el 3 de noviembre de 1957. Pesaba unos 6 kg y fue entrenada junto con otros perros para el programa espacial soviético. Desafortunadamente, el diseño apresurado de la misión no permitió un sistema de retorno, y Laika murió pocas horas después del lanzamiento debido al sobrecalentamiento y el estrés, aunque esto no se reveló públicamente hasta décadas después. Su sacrificio proporcionó datos vitales sobre los efectos del vuelo espacial en organismos vivos, allanando el camino para los vuelos tripulados. En 2008, Rusia develó un monumento en su honor cerca del centro de entrenamiento espacial."
+            },
+            {
+                title: "Yuri Gagarin - El Rostro de la Exploración Espacial",
+                emoji: "👨‍🚀",
+                description: "Yuri Alekséyevich Gagarin nació el 9 de marzo de 1934 en Klúshino, Rusia. Fue seleccionado entre más de 3,000 candidatos para ser el primer cosmonauta soviético. A los 27 años, se convirtió en el primer humano en el espacio. Su vuelo orbital de 108 minutos lo convirtió en una celebridad internacional instantánea. Gagarin era conocido por su carisma, su sonrisa característica y su altura de 1.57 metros, que fue ideal para la pequeña cápsula Vostok. Después de su histórico vuelo, se convirtió en un embajador global de la URSS, visitando más de 30 países. Trágicamente, murió a los 34 años el 27 de marzo de 1968 en un accidente de un avión de entrenamiento MiG-15. Su legado perdura como símbolo de la exploración espacial humana."
+            },
+            {
+                title: "Valentina Tereshkova - Pionera Espacial",
+                emoji: "👩‍🚀",
+                description: "Valentina Vladímirovna Tereshkova nació el 6 de marzo de 1937. Antes de convertirse en cosmonauta, trabajaba en una fábrica textil y era paracaidista amateur. Fue seleccionada entre más de 400 candidatas para el programa espacial. El 16 de junio de 1963, a los 26 años, despegó a bordo de Vostok 6, convirtiéndose en la primera mujer en el espacio. Durante casi tres días en órbita, completó 48 órbitas alrededor de la Tierra, más que todos los astronautas estadounidenses combinados hasta ese momento. Su indicativo de llamada era 'Chaika' (gaviota). Después de su vuelo, se convirtió en ingeniera espacial y prominente política soviética. Sigue siendo, hasta 2025, la única mujer en haber realizado una misión espacial en solitario. Su logro no sería igualado por otra mujer hasta 19 años después, cuando Svetlana Savitskaya voló al espacio en 1982."
+            },
+            {
+                title: "Saturn V - La Bestia Tecnológica",
+                emoji: "🚀",
+                description: "El Saturn V era tan alto como un edificio de 36 pisos y pesaba 2,970 toneladas completamente cargado. Sus cinco motores F-1 de la primera etapa consumían 15 toneladas de combustible por segundo. El ruido del lanzamiento era tan intenso (204 decibelios) que podía causar daño auditivo permanente a varios kilómetros de distancia. Los ingenieros construyeron un sistema de supresión de sonido que liberaba 300,000 galones de agua en 20 segundos durante el lanzamiento. El costo de desarrollo del programa fue de $6.4 mil millones (más de $50 mil millones actuales). Cada lanzamiento costaba aproximadamente $1.23 mil millones en dólares actuales. El cohete podía alcanzar 40,000 km/h. Los tres Saturn V restantes no utilizados se exhiben en el Centro Espacial Kennedy, el Centro Espacial Johnson y el Centro Espacial y de Cohetes de EE.UU."
+            },
+            {
+                title: "Huella Lunar - Símbolo Eterno",
+                emoji: "🌕",
+                description: "Las huellas dejadas por los astronautas del Apollo en la superficie lunar permanecerán allí durante millones de años. Sin atmósfera, no hay viento ni agua para erosionarlas. La superficie lunar está cubierta de regolito, un polvo fino y abrasivo que se adhería a todo. Los astronautas describieron su olor como 'pólvora mojada' o 'ceniza de chimenea'. La gravedad lunar es 1/6 de la terrestre, permitiendo a los astronautas saltar alto pero también haciendo difícil mantener el equilibrio. La temperatura en la superficie iluminada alcanzaba 127°C, mientras que en las sombras caía a -173°C. En total, 12 astronautas caminaron sobre la Luna entre 1969 y 1972: Neil Armstrong, Buzz Aldrin, Pete Conrad, Alan Bean, Alan Shepard, Edgar Mitchell, David Scott, James Irwin, John Young, Charles Duke, Eugene Cernan y Harrison Schmitt."
+            },
+            {
+                title: "Earthrise - La Foto que Cambió Todo",
+                emoji: "🌍",
+                description: "La fotografía 'Earthrise' fue tomada por William Anders durante la misión Apollo 8 el 24 de diciembre de 1968. Muestra la Tierra elevándose sobre el horizonte lunar, parcialmente iluminada, contra la oscuridad del espacio. Esta imagen se considera una de las fotografías más influyentes de todos los tiempos. Ayudó a iniciar el movimiento ambiental moderno al mostrar la fragilidad y el aislamiento de nuestro planeta. El fotógrafo de naturaleza Galen Rowell la llamó 'la fotografía ambiental más influyente jamás tomada'. Anders, el fotógrafo, comentó más tarde: 'Vinimos hasta aquí para explorar la Luna, y lo más importante es que descubrimos la Tierra'. La fotografía fue incluida en la lista de las 100 fotografías más influyentes de todos los tiempos por la revista Time."
+            },
+            {
+                title: "Apollo-Soyuz - Cooperación en la Órbita",
+                emoji: "🤝",
+                description: "El Proyecto de Prueba Apollo-Soyuz (ASTP) fue la primera misión espacial conjunta entre Estados Unidos y la Unión Soviética. Requirió cinco años de preparación y la superación de enormes barreras técnicas y políticas. Los ingenieros tuvieron que desarrollar un módulo de acoplamiento compatible, ya que las naves usaban diferentes atmósferas: el Apollo usaba oxígeno puro a baja presión, mientras que el Soyuz usaba una mezcla de nitrógeno-oxígeno similar al aire terrestre. Las tripulaciones aprendieron los idiomas del otro país. Durante el acoplamiento, Stafford saludó en ruso: '¡Soyuz, aquí Apollo! ¡Muy buenos días!' Leonov respondió en inglés: '¡Muy buenos días! ¡Cómo estás?' Las tripulaciones intercambiaron regalos, incluyendo banderas, semillas de árboles y placas conmemorativas. La misión demostró que incluso en el punto más álgido de la Guerra Fría, la cooperación pacífica era posible."
+            }
+        ];
+
+        // Open Video Modal
+        function openVideoModal(index) {
+    const data = videoData[index];
+    const modal = document.getElementById('modal');
+    const modalContent = document.getElementById('modalContent');
+    
+    modalContent.innerHTML = `
+        <div style="text-align: center;">
+            <div style="font-size: 4rem; margin-bottom: 1rem;">${data.emoji}</div>
+            <h2 style="color: var(--gold); font-size: 1.5rem; margin-bottom: 1rem;">${data.title}</h2>
+            <iframe 
+                width="100%" 
+                height="300" 
+                src="${data.videoUrl}" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen
+                style="border-radius: 15px; margin-bottom: 1.5rem;">
+            </iframe>
+            <p style="color: var(--light-blue); text-align: left; line-height: 1.8; font-size: 0.95rem;">${data.description}</p>
+        </div>
+    `;
+    
+    modal.classList.add('active');
+}
+        // Open Gallery Modal
+        function openGalleryModal(index) {
+            const data = galleryData[index];
+            const modal = document.getElementById('modal');
+            const modalContent = document.getElementById('modalContent');
+            
+            modalContent.innerHTML = `
+                <div style="text-align: center;">
+                    <div style="font-size: 5rem; margin-bottom: 1rem;">${data.emoji}</div>
+                    <h2 style="color: var(--gold); font-size: 1.5rem; margin-bottom: 1rem;">${data.title}</h2>
+                    <p style="color: var(--light-blue); text-align: left; line-height: 1.7; font-size: 0.95rem;">${data.description}</p>
+                </div>
+            `;
+            
+            modal.classList.add('active');
+        }
+
+        // Close Modal
+        function closeModal() {
+            document.getElementById('modal').classList.remove('active');
+        }
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeModal();
+        });
+
+        // Close modal clicking outside
+        document.getElementById('modal').addEventListener('click', (e) => {
+            if (e.target.id === 'modal') closeModal();
+        });
+
+      
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const offset = 80;
+                    const elementPosition = target.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - offset;
+
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Add parallax effect to hero section
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const hero = document.querySelector('.hero-content');
+            if (hero && scrolled < window.innerHeight) {
+                hero.style.transform = `translateY(${scrolled * 0.5}px)`;
+                hero.style.opacity = 1 - (scrolled / window.innerHeight);
+            }
+        });
+
+        // Initialize animations on load
+        window.addEventListener('load', () => {
+            document.body.style.opacity = '1';
+        });
+
+        // ===== SISTEMA DE PAUSA =====
+let isPaused = false;
+let pauseBtn = null;
+let pauseScreen = null;
+let resumeBtn = null;
+
+// Esperar a que cargue el DOM
+document.addEventListener('DOMContentLoaded', () => {
+    pauseBtn = document.getElementById('pauseBtn');
+    pauseScreen = document.getElementById('pauseScreen');
+    resumeBtn = document.getElementById('resumeBtn');
+
+    // Mostrar botón de pausa cuando empiece el juego
+    const originalStartBtn = document.getElementById('startBtn');
+    originalStartBtn.addEventListener('click', () => {
+        setTimeout(() => {
+            if (pauseBtn) pauseBtn.style.display = 'block';
+        }, 100);
+    });
+
+    // Evento del botón de pausa
+    if (pauseBtn) {
+        pauseBtn.addEventListener('click', togglePause);
+    }
+
+    // Evento del botón de reanudar
+    if (resumeBtn) {
+        resumeBtn.addEventListener('click', resumeGame);
+    }
+
+    // Pausa con tecla ESC
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && gameStarted) {
+            togglePause();
+        }
+    });
+});
+
+// Función para pausar/reanudar
+function togglePause() {
+    if (!gameStarted) return;
+
+    if (!isPaused) {
+        // PAUSAR
+        isPaused = true;
+        game.running = false;
+        pauseScreen.style.display = 'flex';
+        pauseBtn.textContent = '▶️ Reanudar';
+        pauseBtn.style.background = 'linear-gradient(135deg, #45A29E, #66FCF1)';
+    } else {
+        // REANUDAR
+        resumeGame();
+    }
+}
+
+// Función para reanudar el juego
+function resumeGame() {
+    isPaused = false;
+    game.running = true;
+    pauseScreen.style.display = 'none';
+    pauseBtn.textContent = '⏸️ Pausar';
+    pauseBtn.style.background = 'linear-gradient(135deg, #fff, #fff)';
+}
+
+// Hover effects con JavaScript
+if (pauseBtn) {
+    pauseBtn.addEventListener('mouseenter', () => {
+        pauseBtn.style.transform = 'translateY(-2px)';
+        pauseBtn.style.boxShadow = '0 6px 20px rgba(255, 215, 0, 0.6)';
+    });
+
+    pauseBtn.addEventListener('mouseleave', () => {
+        pauseBtn.style.transform = 'translateY(0)';
+        pauseBtn.style.boxShadow = '0 4px 15px rgba(255, 215, 0, 0.4)';
+    });
+}
+
+if (resumeBtn) {
+    resumeBtn.addEventListener('mouseenter', () => {
+        resumeBtn.style.transform = 'translateY(-2px) scale(1.05)';
+        resumeBtn.style.boxShadow = '0 8px 25px rgba(69, 162, 158, 0.7)';
+    });
+
+    resumeBtn.addEventListener('mouseleave', () => {
+        resumeBtn.style.transform = 'translateY(0) scale(1)';
+        resumeBtn.style.boxShadow = '0 5px 20px rgba(69, 162, 158, 0.5)';
+    });
+}
+    </script>
+
+
+
+<script>
+// ===== ESTADO DEL JUEGO =====
+let gameStarted = false;
+
+const canvas = document.getElementById('gameCanvas');
+const ctx = canvas.getContext('2d');
+
+// Game state
+const game = {
+    running: false, // CAMBIADO A FALSE
+    timeLeft: 60,
+    winAltitude: 8000,
+    cameraY: 0
+};
+
+// Player rocket
+const player = {
+    x: 300,
+    y: 550,
+    width: 50,
+    height: 80,
+    vx: 0,
+    vy: 0,
+    altitude: 0,
+    thrusting: false,
+    angle: 0
+};
+
+// Bot rocket
+const bot = {
+    x: 700,
+    y: 550,
+    width: 50,
+    height: 80,
+    vx: 0,
+    vy: 0,
+    altitude: 0,
+    thrusting: false,
+    angle: 0,
+    targetY: 550,
+    thrustTimer: 0
+};
+
+// Asteroids
+const asteroids = [];
+
+// Stars
+const stars = [];
+for (let i = 0; i < 1050; i++) {
+    stars.push({
+        x: Math.random() * canvas.width,
+        y: Math.random() * 10000,
+        size: Math.random() * 2.5 + 0.5,
+        twinkle: Math.random() * Math.PI * 2
+    });
+}
+
+// Satellites
+const satellites = [];
+for (let i = 0; i < 50; i++) {
+    satellites.push({
+        x: Math.random() * canvas.width,
+        y: Math.random() * 12000 - 2000,
+        size: Math.random() * 18 + 10,
+        speed: Math.random() * 0.6 + 0.2,
+        rotation: Math.random() * Math.PI * 2,
+        rotSpeed: (Math.random() - 0.5) * 0.01
+    });
+}
+
+// Moon (finish line)
+const moon = {
+    y: -8000,
+    radius: 120
+};
+
+// Input handling
+const keys = {};
+window.addEventListener('keydown', e => {
+    if (game.running) { // SOLO SI EL JUEGO ESTÁ CORRIENDO
+        keys[e.key.toLowerCase()] = true;
+    }
+});
+window.addEventListener('keyup', e => keys[e.key.toLowerCase()] = false);
+
+// Create asteroid
+function createAsteroid() {
+    asteroids.push({
+        x: Math.random() * canvas.width,
+        y: Math.random() * 12000 - 13000,
+        radius: Math.random() * 25 + 20,
+        speed: Math.random() * 2 + 1.5,
+        rotation: Math.random() * Math.PI * 2,
+        rotSpeed: (Math.random() - 0.5) * 0.05
+    });
+}
+
+// Initialize asteroids
+for (let i = 0; i < 100; i++) {
+    createAsteroid();
+}
+
+// ===== BOTÓN DE INICIO =====
+document.addEventListener('DOMContentLoaded', () => {
+    document.getElementById('startBtn').addEventListener('click', () => {
+        document.getElementById('startScreen').style.display = 'none';
+        game.running = true; // AHORA SÍ INICIA EL JUEGO
+        gameStarted = true;
+        startTimer(); // Inicia el temporizador
+        startAsteroidSpawner(); // Inicia la generación de asteroides
+    });
+});
+
+// ===== GENERADOR DE ASTEROIDES =====
+let asteroidInterval;
+function startAsteroidSpawner() {
+    asteroidInterval = setInterval(() => {
+        if (game.running) {
+            createAsteroid();
+        }
+    }, 500);
+}
+
+// Draw rocket with realistic design
+function drawRocket(rocket, color) {
+    ctx.save();
+    ctx.translate(rocket.x, rocket.y - game.cameraY);
+    ctx.rotate(rocket.angle);
+
+    // Shadow
+    ctx.fillStyle = 'rgba(0,0,0,0.3)';
+    ctx.beginPath();
+    ctx.ellipse(5, 45, 25, 8, 0, 0, Math.PI * 2);
+    ctx.fill();
+
+    // Gradient body
+    const gradient = ctx.createLinearGradient(-25, 0, 25, 0);
+    if (color === 'red') {
+        gradient.addColorStop(0, '#c0392b');
+        gradient.addColorStop(0.5, '#e74c3c');
+        gradient.addColorStop(1, '#c0392b');
+    } else {
+        gradient.addColorStop(0, '#2980b9');
+        gradient.addColorStop(0.5, '#3498db');
+        gradient.addColorStop(1, '#2980b9');
+    }
+
+    // Body
+    ctx.fillStyle = gradient;
+    ctx.beginPath();
+    ctx.moveTo(0, -40);
+    ctx.quadraticCurveTo(-20, -30, -20, 20);
+    ctx.lineTo(-20, 35);
+    ctx.lineTo(20, 35);
+    ctx.lineTo(20, 20);
+    ctx.quadraticCurveTo(20, -30, 0, -40);
+    ctx.closePath();
+    ctx.fill();
+
+    // FLAGS
+    ctx.save();
+    ctx.rotate(-rocket.angle);
+
+    const flagY = 4;
+    const flagX = -14;
+    const flagW = 28;
+    const flagH = 16;
+
+    if (color === 'red') {
+        // USSR FLAG
+        ctx.fillStyle = '#cc0000';
+        ctx.fillRect(flagX, flagY, flagW, flagH);
+
+        ctx.fillStyle = '#ffcc00';
+        ctx.beginPath();
+        ctx.moveTo(flagX + 6, flagY + 3);
+        ctx.lineTo(flagX + 8, flagY + 7);
+        ctx.lineTo(flagX + 4, flagY + 7);
+        ctx.closePath();
+        ctx.fill();
+
+        ctx.beginPath();
+        ctx.arc(flagX + 12, flagY + 9, 5, Math.PI * 0.2, Math.PI * 1.3);
+        ctx.strokeStyle = '#ffcc00';
+        ctx.lineWidth = 2;
+        ctx.stroke();
+
+        ctx.beginPath();
+        ctx.moveTo(flagX + 13, flagY + 11);
+        ctx.lineTo(flagX + 16, flagY + 15);
+        ctx.stroke();
+    }
+
+    if (color === 'blue') {
+        // USA FLAG
+        ctx.fillStyle = 'white';
+        ctx.fillRect(flagX, flagY, flagW, flagH);
+
+        ctx.fillStyle = '#b30000';
+        for (let i = 0; i < 7; i++) {
+            ctx.fillRect(flagX, flagY + i * 2.3, flagW, 1.5);
+        }
+
+        ctx.fillStyle = '#0033aa';
+        ctx.fillRect(flagX, flagY, 12, 8);
+
+        ctx.fillStyle = 'white';
+        for (let y = 0; y < 4; y++) {
+            for (let x = 0; x < 3; x++) {
+                ctx.fillRect(flagX + 2 + x * 3, flagY + 1 + y * 2, 1, 1);
+            }
+        }
+    }
+
+    ctx.restore();
+
+    // Fins
+    ctx.fillStyle = color === 'red' ? '#a93226' : '#21618c';
+    ctx.beginPath();
+    ctx.moveTo(-20, 20);
+    ctx.lineTo(-35, 40);
+    ctx.lineTo(-20, 35);
+    ctx.closePath();
+    ctx.fill();
+
+    ctx.beginPath();
+    ctx.moveTo(20, 20);
+    ctx.lineTo(35, 40);
+    ctx.lineTo(20, 35);
+    ctx.closePath();
+    ctx.fill();
+
+    // Window
+    ctx.fillStyle = '#34495e';
+    ctx.strokeStyle = '#7f8c8d';
+    ctx.lineWidth = 3;
+    ctx.beginPath();
+    ctx.arc(0, -15, 12, 0, Math.PI * 2);
+    ctx.fill();
+    ctx.stroke();
+
+    // Glare
+    ctx.fillStyle = 'rgba(255,255,255,0.4)';
+    ctx.beginPath();
+    ctx.arc(-4, -18, 5, 0, Math.PI * 2);
+    ctx.fill();
+
+    // Center line
+    ctx.strokeStyle = color === 'red' ? '#922b21' : '#1a5276';
+    ctx.lineWidth = 2;
+    ctx.beginPath();
+    ctx.moveTo(-15, 0);
+    ctx.lineTo(15, 0);
+    ctx.stroke();
+
+    // Flame
+    if (rocket.thrusting) {
+        const flameHeight = Math.random() * 15 + 25;
+
+        ctx.fillStyle = '#ff6b35';
+        ctx.beginPath();
+        ctx.moveTo(-15, 35);
+        ctx.quadraticCurveTo(-8, 35 + flameHeight * 0.7, 0, 35 + flameHeight);
+        ctx.quadraticCurveTo(8, 35 + flameHeight * 0.7, 15, 35);
+        ctx.closePath();
+        ctx.fill();
+
+        ctx.fillStyle = '#ff9500';
+        ctx.beginPath();
+        ctx.moveTo(-10, 35);
+        ctx.quadraticCurveTo(-5, 35 + flameHeight * 0.6, 0, 35 + flameHeight * 0.8);
+        ctx.quadraticCurveTo(5, 35 + flameHeight * 0.6, 10, 35);
+        ctx.closePath();
+        ctx.fill();
+
+        ctx.fillStyle = '#ffeb3b';
+        ctx.beginPath();
+        ctx.moveTo(-5, 35);
+        ctx.quadraticCurveTo(-2, 35 + flameHeight * 0.4, 0, 35 + flameHeight * 0.5);
+        ctx.quadraticCurveTo(2, 35 + flameHeight * 0.4, 5, 35);
+        ctx.closePath();
+        ctx.fill();
+    }
+
+    ctx.restore();
+}
+
+// Draw asteroid
+function drawAsteroid(asteroid) {
+    const screenY = asteroid.y - game.cameraY;
+    if (screenY < -100 || screenY > canvas.height + 100) return;
+    
+    ctx.save();
+    ctx.translate(asteroid.x, screenY);
+    ctx.rotate(asteroid.rotation);
+    
+    ctx.fillStyle = 'rgba(0,0,0,0.3)';
+    ctx.beginPath();
+    ctx.arc(5, 5, asteroid.radius, 0, Math.PI * 2);
+    ctx.fill();
+    
+    ctx.fillStyle = '#6b5b4a';
+    ctx.strokeStyle = '#4a3f35';
+    ctx.lineWidth = 2;
+    
+    ctx.beginPath();
+    for (let i = 0; i < 10; i++) {
+        const angle = (i / 10) * Math.PI * 2;
+        const r = asteroid.radius * (0.85 + Math.random() * 0.3);
+        const x = Math.cos(angle) * r;
+        const y = Math.sin(angle) * r;
+        if (i === 0) ctx.moveTo(x, y);
+        else ctx.lineTo(x, y);
+    }
+    ctx.closePath();
+    ctx.fill();
+    ctx.stroke();
+    
+    ctx.fillStyle = '#5a4a3a';
+    for (let i = 0; i < 3; i++) {
+        const angle = Math.random() * Math.PI * 2;
+        const dist = Math.random() * asteroid.radius * 0.5;
+        const x = Math.cos(angle) * dist;
+        const y = Math.sin(angle) * dist;
+        ctx.beginPath();
+        ctx.arc(x, y, asteroid.radius * 0.2, 0, Math.PI * 2);
+        ctx.fill();
+    }
+    
+    ctx.restore();
+}
+
+// Draw moon
+function drawMoon() {
+    const screenY = moon.y - game.cameraY;
+    if (screenY > canvas.height + 200) return;
+    
+    const centerX = canvas.width / 2;
+    
+    ctx.save();
+    
+    const gradient = ctx.createRadialGradient(centerX, screenY, moon.radius * 0.8, centerX, screenY, moon.radius * 2);
+    gradient.addColorStop(0, 'rgba(255, 255, 180, 0.3)');
+    gradient.addColorStop(1, 'rgba(255, 255, 180, 0)');
+    ctx.fillStyle = gradient;
+    ctx.beginPath();
+    ctx.arc(centerX, screenY, moon.radius * 2, 0, Math.PI * 2);
+    ctx.fill();
+    
+    ctx.fillStyle = '#f4e4b7';
+    ctx.beginPath();
+    ctx.arc(centerX, screenY, moon.radius, 0, Math.PI * 2);
+    ctx.fill();
+    
+    ctx.fillStyle = '#d9c89e';
+    const craters = [
+        {x: -40, y: -30, r: 20},
+        {x: 30, y: -40, r: 15},
+        {x: -20, y: 35, r: 25},
+        {x: 50, y: 20, r: 12},
+        {x: 0, y: 0, r: 18},
+        {x: -50, y: 10, r: 10}
+    ];
+    
+    craters.forEach(crater => {
+        ctx.beginPath();
+        ctx.arc(centerX + crater.x, screenY + crater.y, crater.r, 0, Math.PI * 2);
+        ctx.fill();
+    });
+    
+    ctx.fillStyle = '#ffd700';
+    ctx.font = 'bold 30px Arial';
+    ctx.textAlign = 'center';
+    ctx.strokeStyle = '#000';
+    ctx.lineWidth = 3;
+    ctx.strokeText('META', centerX, screenY - moon.radius - 30);
+    ctx.fillText('META', centerX, screenY - moon.radius - 30);
+    
+    ctx.restore();
+}
+
+// Update player
+function updatePlayer() {
+    player.thrusting = false;
+    
+    if (keys['w'] || keys['arrowup']) {
+        player.vy -= 0.4;
+        player.thrusting = true;
+    }
+    
+    if (keys['a'] || keys['arrowleft']) {
+        player.vx -= 0.3;
+        player.angle = Math.max(-0.3, player.angle - 0.05);
+    } else if (keys['d'] || keys['arrowright']) {
+        player.vx += 0.3;
+        player.angle = Math.min(0.3, player.angle + 0.05);
+    } else {
+        player.angle *= 0.9;
+    }
+    
+    player.vy += 0.1;
+    player.x += player.vx;
+    player.y += player.vy;
+    player.vx *= 0.90;
+    player.vy *= 0.92;
+    
+    if (player.x < 25) player.x = 25;
+    if (player.x > canvas.width - 25) player.x = canvas.width - 25;
+    if (player.y > 550) {
+        player.y = 550;
+        player.vy = 0;
+    }
+    
+    player.altitude = Math.max(0, 550 - player.y);
+}
+
+// Update bot
+function updateBot() {
+    bot.thrustTimer++;
+    bot.thrusting = false;
+
+    bot.vy -= 0.45;
+    bot.thrusting = true;
+
+    let dodgeLeft = false;
+    let dodgeRight = false;
+
+    for (let asteroid of asteroids) {
+        const dist = Math.hypot(asteroid.x - bot.x, asteroid.y - bot.y);
+
+        if (dist < 200) {
+            if (asteroid.x < bot.x) dodgeRight = true;
+            else dodgeLeft = true;
+        }
+    }
+
+    if (dodgeLeft) bot.vx -= 0.35;
+    if (dodgeRight) bot.vx += 0.35;
+
+    if (!dodgeLeft && !dodgeRight) {
+        const centerX = canvas.width / 2;
+        if (bot.x < centerX - 80) bot.vx += 0.25;
+        else if (bot.x > centerX + 80) bot.vx -= 0.25;
+    }
+
+    if (bot.vx > 0.4) bot.angle = Math.min(0.25, bot.angle + 0.05);
+    else if (bot.vx < -0.4) bot.angle = Math.max(-0.25, bot.angle - 0.05);
+    else bot.angle *= 0.9;
+
+    bot.vy += 0.1;
+    bot.x += bot.vx;
+    bot.y += bot.vy;
+    bot.vx *= 0.69;
+    bot.vy *= 0.90;
+
+    if (bot.x < 25) bot.x = 25;
+    if (bot.x > canvas.width - 25) bot.x = canvas.width - 25;
+    if (bot.y > 550) {
+        bot.y = 550;
+        bot.vy = 0;
+    }
+
+    bot.altitude = Math.max(0, 550 - bot.y);
+}
+
+// Check collisions
+function checkCollisions(rocket) {
+    for (let asteroid of asteroids) {
+        const dist = Math.hypot(asteroid.x - rocket.x, asteroid.y - rocket.y);
+        
+        if (dist < asteroid.radius + 30) {
+            rocket.vy += 3;
+            rocket.vx += (rocket.x - asteroid.x) * 0.1;
+        }
+    }
+}
+
+// Update asteroids
+function updateAsteroids() {
+    asteroids.forEach(asteroid => {
+        asteroid.rotation += asteroid.rotSpeed;
+        asteroid.y += asteroid.speed;
+
+        if (asteroid.y - game.cameraY > canvas.height + 200) {
+            asteroid.y = bot.y - 8000 - Math.random() * 4000;
+            asteroid.x = Math.random() * canvas.width;
+        }
+    });
+}
+
+function updateSatellites() {
+    satellites.forEach(sat => {
+        sat.rotation += sat.rotSpeed;
+        sat.y += sat.speed;
+
+        if (sat.y - game.cameraY > canvas.height + 200) {
+            sat.y = bot.y - 6000 - Math.random() * 4000;
+            sat.x = Math.random() * canvas.width;
+        }
+    });
+}
+
+// Draw stars
+function drawStars() {
+    ctx.fillStyle = 'white';
+    stars.forEach(star => {
+        const screenY = star.y - game.cameraY;
+        if (screenY < -10 || screenY > canvas.height + 10) return;
+        
+        const alpha = 0.5 + Math.sin(star.twinkle) * 0.5;
+        ctx.globalAlpha = alpha;
+        ctx.beginPath();
+        ctx.arc(star.x, screenY, star.size, 0, Math.PI * 2);
+        ctx.fill();
+        star.twinkle += 0.05;
+    });
+    ctx.globalAlpha = 1;
+}
+
+function updateStars() {
+    stars.forEach(star => {
+        const screenY = star.y - game.cameraY;
+
+        if (screenY < -50) {
+            star.y += canvas.height + 1000;
+            star.x = Math.random() * canvas.width;
+        }
+
+        if (screenY > canvas.height + 50) {
+            star.y -= canvas.height + 1000;
+            star.x = Math.random() * canvas.width;
+        }
+    });
+}
+
+function drawSatellites() {
+    satellites.forEach(sat => {
+        const screenY = sat.y - game.cameraY;
+        if (screenY < -50 || screenY > canvas.height + 50) return;
+
+        ctx.save();
+        ctx.translate(sat.x, screenY);
+        ctx.rotate(sat.rotation);
+
+        ctx.fillStyle = '#c0c0c0';
+        ctx.fillRect(-sat.size / 2, -sat.size / 4, sat.size, sat.size / 2);
+
+        ctx.fillStyle = '#4a90e2';
+        ctx.fillRect(-sat.size - 8, -sat.size / 3, sat.size / 1.4, sat.size * 0.66);
+
+        ctx.fillStyle = '#4a90e2';
+        ctx.fillRect(sat.size + 8 - sat.size / 1.4, -sat.size / 3, sat.size / 1.4, sat.size * 0.66);
+
+        ctx.restore();
+    });
+}
+
+// Update camera
+function updateCamera() {
+    const target = Math.min(player.y, bot.y) - 200;
+    game.cameraY += (target - game.cameraY) * 0.05;
+}
+
+// Update UI
+function updateUI() {
+    document.getElementById('playerAlt').textContent = Math.floor(player.altitude);
+    document.getElementById('botAlt').textContent = Math.floor(bot.altitude);
+}
+
+// Check win
+function checkWin() {
+    if (player.altitude >= game.winAltitude) {
+        endGame('¡VICTORIA!', '¡La USSR ha llegado primero!', '#ffd700');
+        return true;
+    }
+    if (bot.altitude >= game.winAltitude) {
+        endGame('DERROTA', 'Los Estadounidenses llegaron primero', '#ff4444');
+        return true;
+    }
+    return false;
+}
+
+// End game
+function endGame(title, message, color) {
+    game.running = false;
+    clearInterval(timerInterval);
+    clearInterval(asteroidInterval);
+    document.getElementById('resultTitle').textContent = title;
+    document.getElementById('resultTitle').style.color = color;
+    document.getElementById('resultMessage').textContent = message;
+    document.getElementById('gameOver').style.display = 'block';
+}
+
+// Timer
+let timerInterval;
+function startTimer() {
+    timerInterval = setInterval(() => {
+        if (game.running) {
+            game.timeLeft--;
+            document.getElementById('timer').textContent = game.timeLeft;
+            
+            if (game.timeLeft <= 0) {
+                if (player.altitude > bot.altitude) {
+                    endGame('¡VICTORIA!', '¡La USSR ha llegado primero!', '#ffd700');
+                } else if (bot.altitude > player.altitude) {
+                    endGame('DERROTA', 'Los Estadounidenses llegaron primero', '#ff4444');
+                } else {
+                    endGame('EMPATE', '¡Ambos llegaron a la Luna!', '#ffaa00');
+                }
+            }
+        }
+    }, 1000);
+}
+
+// Game loop
+function gameLoop() {
+    if (game.running) {
+        ctx.fillStyle = 'rgba(10, 14, 39, 1)';
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+        
+        updatePlayer();
+        updateBot();
+        updateAsteroids();
+        updateSatellites();
+        updateStars();
+        updateCamera();
+        
+        checkCollisions(player);
+        checkCollisions(bot);
+        
+        drawStars();
+        drawSatellites();
+        drawMoon();
+        asteroids.forEach(drawAsteroid);
+        drawRocket(player, 'red');
+        drawRocket(bot, 'blue');
+        
+        ctx.fillStyle = '#2c3e50';
+        ctx.fillRect(0, 550 - game.cameraY, canvas.width, 100);
+        
+        ctx.fillStyle = '#34495e';
+        for (let i = 0; i < 20; i++) {
+            const x = (i * 50);
+            ctx.fillRect(x, 555 - game.cameraY, 30, 5);
+        }
+        
+        updateUI();
+        checkWin();
+    }
+    
+    requestAnimationFrame(gameLoop);
+}
+
+// Iniciar el loop (pero no el juego)
+gameLoop();
+
+        // Preguntas del Quiz
+const quizQuestions = [
+    {
+        question: "¿En qué año fue lanzado el Sputnik 1, el primer satélite artificial?",
+        options: ["1955", "1957", "1959", "1961"],
+        correct: 1
+    },
+    {
+        question: "¿Quién fue el primer ser humano en viajar al espacio?",
+        options: ["Neil Armstrong", "Buzz Aldrin", "Yuri Gagarin", "Alan Shepard"],
+        correct: 2
+    },
+    {
+        question: "¿Qué presidente de EE.UU. anunció el objetivo de llegar a la Luna?",
+        options: ["Dwight Eisenhower", "John F. Kennedy", "Lyndon B. Johnson", "Richard Nixon"],
+        correct: 1
+    },
+    {
+        question: "¿En qué año el ser humano pisó la Luna por primera vez?",
+        options: ["1967", "1968", "1969", "1970"],
+        correct: 2
+    },
+    {
+        question: "¿Cuál era el nombre del módulo lunar del Apollo 11?",
+        options: ["Columbia", "Eagle", "Challenger", "Discovery"],
+        correct: 1
+    },
+    {
+        question: "¿Quién fue la primera mujer en el espacio?",
+        options: ["Sally Ride", "Valentina Tereshkova", "Mae Jemison", "Christa McAuliffe"],
+        correct: 1
+    },
+    {
+        question: "¿Cuántos astronautas caminaron en la Luna durante el programa Apollo?",
+        options: ["6", "8", "10", "12"],
+        correct: 3
+    },
+    {
+        question: "¿Qué cohete utilizó la NASA para las misiones Apollo?",
+        options: ["Atlas V", "Delta IV", "Saturn V", "Titan II"],
+        correct: 2
+    },
+    {
+        question: "¿Cuál fue la primera estación espacial de la historia?",
+        options: ["Skylab", "Mir", "Salyut 1", "ISS"],
+        correct: 2
+    },
+    {
+        question: "¿Qué misión simbolizó el fin de la rivalidad espacial entre EE.UU. y la URSS?",
+        options: ["Apollo 17", "Apollo-Soyuz", "Skylab", "Space Shuttle"],
+        correct: 1
+    }
+];
+
+let currentQuestionIndex = 0;
+let score = 0;
+
+function startQuiz() {
+    document.getElementById('quizSection').style.display = 'block';
+    document.getElementById('quizSection').scrollIntoView({ behavior: 'smooth' });
+    currentQuestionIndex = 0;
+    score = 0;
+    updateScore();
+    loadQuestion();
+}
+
+function loadQuestion() {
+    if (currentQuestionIndex >= quizQuestions.length) {
+        showResults();
+        return;
+    }
+
+    const question = quizQuestions[currentQuestionIndex];
+    document.getElementById('currentQuestion').textContent = currentQuestionIndex + 1;
+    document.getElementById('questionText').textContent = question.question;
+
+    const optionsGrid = document.getElementById('optionsGrid');
+    optionsGrid.innerHTML = '';
+
+    question.options.forEach((option, index) => {
+        const btn = document.createElement('button');
+        btn.className = 'option-btn';
+        btn.textContent = option;
+        btn.onclick = () => selectAnswer(index);
+        optionsGrid.appendChild(btn);
+    });
+}
+
+function selectAnswer(selectedIndex) {
+    const question = quizQuestions[currentQuestionIndex];
+    const buttons = document.querySelectorAll('.option-btn');
+    
+    buttons.forEach(btn => btn.disabled = true);
+
+    if (selectedIndex === question.correct) {
+        buttons[selectedIndex].classList.add('correct');
+        score += 10;
+        updateScore();
+    } else {
+        buttons[selectedIndex].classList.add('incorrect');
+        buttons[question.correct].classList.add('correct');
+    }
+
+    setTimeout(() => {
+        currentQuestionIndex++;
+        loadQuestion();
+    }, 1500);
+}
+
+function updateScore() {
+    document.getElementById('score').textContent = score;
+}
+
+function showResults() {
+    document.getElementById('quizContent').style.display = 'none';
+    document.getElementById('quizResult').style.display = 'flex';
+    document.getElementById('finalScore').textContent = score;
+
+    let message = '';
+    if (score === 100) {
+        message = '¡Perfecto! Eres un experto en la carrera espacial. 🏆🚀';
+    } else if (score >= 70) {
+        message = '¡Excelente! Tienes grandes conocimientos sobre el tema. 🌟';
+    } else if (score >= 50) {
+        message = '¡Bien hecho! Conoces bastante sobre la carrera espacial. 👍';
+    } else {
+        message = 'Sigue aprendiendo, hay mucho por descubrir. 📚';
+    }
+
+    document.getElementById('resultMessage').textContent = message;
+}
+
+function restartQuiz() {
+    document.getElementById('quizResult').style.display = 'none';
+    document.getElementById('quizContent').style.display = 'block';
+    currentQuestionIndex = 0;
+    score = 0;
+    updateScore();
+    loadQuestion();
+}
+
+function closeQuiz() {
+    document.getElementById('quizSection').style.display = 'none';
+    document.getElementById('quizResult').style.display = 'none';
+    document.getElementById('quizContent').style.display = 'block';
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function closeQuiz() {
+    // Confirmar si hay progreso en el quiz
+    if (currentQuestionIndex > 0 && currentQuestionIndex < quizQuestions.length) {
+        const confirmClose = confirm('¿Estás seguro de que quieres salir? Perderás tu progreso actual.');
+        if (!confirmClose) {
+            return; // No cerrar si el usuario cancela
+        }
+    }
+    
+    document.getElementById('quizSection').style.display = 'none';
+    document.getElementById('quizResult').style.display = 'none';
+    document.getElementById('quizContent').style.display = 'block';
+    
+    // Resetear el quiz
+    currentQuestionIndex = 0;
+    score = 0;
+    updateScore();
+    
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+    </script>
+</body>
+</html>
